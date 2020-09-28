@@ -1,13 +1,137 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+    min-height: 100vh;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* Style du header */
+header{
+    display:flex;
+    justify-content: space-between;
+    background-color: rgb(40, 117, 218);
+    padding: 0;;
+    margin: 0;
+}
+header h1{
+    margin-left: 20px;
+    color:white;
+}
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 4em;
+}
+header div button:nth-child(2){
+    background-color: rgb(36, 33, 33);
+    color:white;
+    margin:0;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+header div button:nth-child(1){
+    background-color: transparent;
+    color:white;
+    margin:0;
+    border: none;
+    padding: 5px 6px;
+}
+header div button:hover{
+    cursor: pointer;
+}
+/* Style du contenu principal */
+h2{
+    margin: 0;
+    padding: 10px 20px;
+    background-color: rgb(36, 30, 30);
+    color:white;
+}
+.items-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding:20px 50px;
+}
+.item{
+    width:12%;
+    height: auto;
+    margin:5px 10px;
+}
+.item img{
+    width: 100%;
+    height: auto;
+}
+
+.home{
+    display: flex;
+   height: 100%;
+   min-height: 33em;
+    
+}
+.home div{
+    background-color: rgb(32, 27, 27);
+    width:8em;
+    height: 200px;
+    margin:10px;
+}
+.home div:hover{
+    cursor: pointer;
+}
+.home div img{
+    width: 100%;
+    height: auto;
+}
+.home div h3{
+    text-align: center;
+    color:white;
+}
+/* style du footer */
+footer{
+    background-color: rgb(36, 30, 30);
+    color:rgb(193, 194, 194);
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+}
+footer img{
+    margin:0 10px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Le responsive pour tablettes*/
+
+@media screen and (max-width: 800px){
+        .item{
+            width: 30%;
+        }
+}
+
+/* le responsive pour smartphone */
+
+@media screen and (max-width: 600px){
+    .item{
+        width: 60%;
+    }
+
+    header{
+        flex-direction: column;
+        
+    }
+    header div{
+        justify-content: flex-end;
+    }
+    footer .flex{
+        flex-direction: column;
+        align-items: center;
+    }
 }
